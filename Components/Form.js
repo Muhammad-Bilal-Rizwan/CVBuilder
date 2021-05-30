@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, TextInput, Text, View, ScrollView } from "react-native";
+import { SafeAreaView, StyleSheet, TextInput, Text, View, ScrollView, Button, Alert } from "react-native";
 
 const Form = () => {
   const [name, onChangeName] = React.useState("");
@@ -144,6 +144,12 @@ const Form = () => {
         value={skills}
         placeholder="Skills"
       />
+
+      <Button
+        style= {styles.buttonSubmit}
+        title="Submit"
+        onPress={() => Alert.alert('Button with adjusted color pressed')}
+      />
       
     </SafeAreaView>
     </ScrollView>
@@ -198,6 +204,15 @@ const styles = StyleSheet.create({
     width: 113,
     borderWidth: 1,
     textAlign: 'center'
+  },
+  buttonSubmit: {
+      height: 40,
+      margin: 12,
+      paddingTop: 20,
+      width: 250,
+      borderWidth: 1,
+      textAlign: 'center',
+      backgroundColor: '#2D3748'
   }
 });
 
